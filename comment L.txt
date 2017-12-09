@@ -1,0 +1,30 @@
+<?php
+	date_default_timezone_set('europe/copenhagen');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<p>
+	<h3>application</h3> 
+		<a href="post.php">Post List </a>
+		  <a href="home.php">Back to Blog</a>
+		 <a href="login.php"> Logout</a>
+		</p>
+	</div>
+	<?php
+	echo "<form>
+		<div class='input-group'>
+		<input type='hidden' name='comment_id' value='anonymous'>
+		<input type='hidden' name='date' value='". date('Y-m-d H:i:s')."'>
+		<textarea name='message'></textarea><br>
+		<button type='submit' name='submit'>Comment</button>
+		</div>
+	</form>";
+?>
+</body>
+</html>
